@@ -220,7 +220,8 @@ def test_model(model, test_loader):
     print("Classification Report:")
     print(classification_report(all_labels, all_preds, target_names=train_dataset.classes))
 
-
+model = model.to(device)
+test_model(model, test_loader)
 
 ## Step 5: Predict on a Single Image and Display It
 def predict_image(model, image_index, dataset):
