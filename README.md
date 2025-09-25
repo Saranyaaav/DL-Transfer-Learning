@@ -236,7 +236,6 @@ def predict_image(model, image_index, dataset):
         prob = torch.sigmoid(output)
         predicted = (prob > 0.5).int().item()
 
-
     class_names = class_names = dataset.classes
     # Display the image
     image_to_display = transforms.ToPILImage()(image)
